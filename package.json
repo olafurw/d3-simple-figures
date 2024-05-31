@@ -1,0 +1,35 @@
+{
+  "name": "d3-simple-figures",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olafurw/d3-simple-figures.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olafurw/d3-simple-figures/issues"
+  },
+  "homepage": "https://github.com/olafurw/d3-simple-figures#readme",
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.2.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.11.0"
+  },
+  "peerDependencies": {
+    "d3": "^6.7.0"
+  }
+}
