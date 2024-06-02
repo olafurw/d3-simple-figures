@@ -1,12 +1,17 @@
 {
     "compilerOptions": {
-        "module": "ESNext",
-        "moduleResolution": "Bundler",
-        "target": "ES2020",
+        "module": "CommonJS",
+        "lib": ["es5", "es6", "es2016", "dom"],
+        "allowJs": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "target": "ES5",
         "declaration": true,
         "strict": true,
         "outDir": "./dist",
         "allowUnreachableCode": false,
+        "noImplicitAny": false, // oli temp
         "allowUnusedLabels": false,
         "noErrorTruncation": true,
         "noFallthroughCasesInSwitch": true,

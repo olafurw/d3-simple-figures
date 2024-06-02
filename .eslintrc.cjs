@@ -17,5 +17,10 @@ module.exports = {
     },
     env: {
         browser: true
+    },
+    rules: {
+        // oli, temp
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-explicit-any': 'off'
     }
 };
