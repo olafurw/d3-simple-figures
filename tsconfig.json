@@ -1,24 +1,17 @@
 {
     "compilerOptions": {
+        "target": "es6",
         "module": "CommonJS",
-        "lib": ["es5", "es6", "es2016", "dom"],
-        "allowJs": true,
-        "sourceMap": true,
-        "esModuleInterop": true,
-        "moduleResolution": "node",
-        "target": "ES5",
-        "declaration": true,
+        "moduleResolution": "Node",
+        "noEmitOnError": true,
+        "lib": ["es6", "dom"],
         "strict": true,
-        "outDir": "./dist",
-        "allowUnreachableCode": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
         "noImplicitAny": false, // oli temp
-        "allowUnusedLabels": false,
-        "noErrorTruncation": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitReturns": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "useUnknownInCatchVariables": true
+        "outDir": "./out",
+        "rootDir": "./"
     },
-    "include": ["src/**/*"]
+    "include": ["./src/**/*.ts"],
+    "exclude": ["node_modules", "out"]
 }

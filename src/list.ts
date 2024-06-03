@@ -11,8 +11,6 @@ export function makeListContext(items, color, margins, fontSize) {
     const width = window.innerWidth - margin.left - margin.right;
     const height = Math.min(860, window.innerHeight - margin.top - margin.bottom);
 
-    console.log("Height : " + height)
-
     let hierarchy = makeHierarchy(tree, height);
     const svg = makeSvg(width, height, margin);
 
@@ -43,8 +41,6 @@ export function makeTreeContext(tree, color, linkLength, margins, fontSize) {
     const width = window.innerWidth - margin.left - margin.right;
     const height = Math.min(860, window.innerHeight - margin.top - margin.bottom);
 
-    console.log("Height : " + height)
-
     let hierarchy = makeHierarchy(tree, height);
     const svg = makeSvg(width, height, margin);
 
@@ -66,7 +62,7 @@ export function makeTreeContext(tree, color, linkLength, margins, fontSize) {
     return context;
 }
 
-function makeTree(strings) {
+export function makeTree(strings) {
 
     function makeNode(item) {
         const nodeType = {
@@ -96,7 +92,6 @@ function makeTree(strings) {
         }
     })
 
-    console.log(JSON.stringify(treeData))
     return treeData;
 }
 
@@ -167,10 +162,8 @@ function findNode(name, nodes) {
 }
 
 function showAll(itemName, listContext) {
-    console.log("Show all " + itemName)
-    expand(listContext.root)
-    let node = findNode(itemName, [listContext.root])
-    console.log("Show all " + JSON.stringify(node.data.name))
+    expand(listContext.root);
+    let node = findNode(itemName, [listContext.root]);
     update(node.parent, listContext);
 }
 
@@ -207,7 +200,6 @@ export function makeDFTransitions(listContext) {
     let nodesList = nodes([listContext.root])
     let compactList = compact(nodesList)
     let idList = compactList.map((item) => item.data.name)
-    console.log(idList)
 
     return transitionsFromList(idList, listContext);
 }
@@ -242,10 +234,9 @@ export function makeBFTransitions(listContext) {
         return doneList
     }
 
-    let nodesList = nodes([listContext.root])
-    let compactList = compact(nodesList)
-    let idList = compactList.map((item) => item.data.name)
-    console.log(idList)
+    let nodesList = nodes([listContext.root]);
+    let compactList = compact(nodesList);
+    let idList = compactList.map((item) => item.data.name);
 
     return transitionsFromList(idList, listContext);
 }
@@ -289,18 +280,14 @@ function hideSubtree(subtree, listContext) {
 }
 
 function addItem(childName, listContext) {
-    console.log("Add : " + childName)
     let node = findNode(childName, [listContext.root])
-    console.log("Show : " + node)
     if (node && node.parent) {
         showChildren(node.parent, listContext)
     }
 }
 
 function removeItem(childName, listContext) {
-    console.log("Remove : " + childName)
     let node = findNode(childName, [listContext.root])
-    console.log("Hide : " + node)
     if (node && node.parent) {
         hideSubtree(node.parent, listContext)
     }
@@ -310,7 +297,7 @@ function update(source, listContext) {
 
     // Assigns the x and y position for the nodes
     let root = listContext.root;
-    console.log("root : " + root)
+
     // declares a tree layout and assigns the size
     const treemap = d3.tree().size([listContext.height, listContext.width]);
 

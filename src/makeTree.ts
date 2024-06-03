@@ -1,4 +1,4 @@
-import { makeNode, Node } from "./makeNode"
+import { makeNode, Node } from "./makeNode.js"
 
 export function makeTree(strings: string[]): Node | null {
     const nodes = strings
