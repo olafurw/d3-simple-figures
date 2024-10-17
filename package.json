@@ -8,9 +8,9 @@
     "scripts": {
         "lint": "npx eslint .",
         "build": "npx tsc",
-        "rollup": "npx rollup -c",
+        "bundle": "npx browserify -r ./out/src/index.js:hello -o bundle.js",
         "test": "npx vitest run",
-        "full": "npm install && npm run lint && npm run build && npm run test && npm run rollup"
+        "full": "npm install && npm run lint && npm run build && npm run test && npm run bundle"
     },
     "repository": {
         "type": "git",
