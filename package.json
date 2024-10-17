@@ -1,46 +1,42 @@
 {
-  "name": "d3-simple-figures",
-  "version": "0.1.0",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
-  "files": [
-    "/dist"
-  ],
-  "scripts": {
-    "lint": "npx eslint .",
-    "build": "npx tsc",
-    "rollup": "npx rollup -c",
-    "test": "npx vitest run",
-    "full": "npm install && npm run lint && npm run build && npm run test && npm run rollup"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/olafurw/d3-simple-figures.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/olafurw/d3-simple-figures/issues"
-  },
-  "homepage": "https://github.com/olafurw/d3-simple-figures#readme",
-  "devDependencies": {
-    "@types/d3": "^7.4.3",
-    "@types/node": "^20.14.0",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "esbuild": "^0.21.4",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "3.2.5",
-    "rollup": "^4.18.0",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-esbuild": "^6.1.1",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.11.0",
-    "vitest": "^1.6.0"
-  },
-  "peerDependencies": {
-    "d3": "^6.7.0"
-  }
+    "name": "d3-simple-figures",
+    "version": "0.1.0",
+    "description": "",
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "lint": "npx eslint .",
+        "build": "npx tsc",
+        "rollup": "npx rollup -c",
+        "test": "npx vitest run",
+        "full": "npm install && npm run lint && npm run build && npm run test && npm run rollup"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/olafurw/d3-simple-figures.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/olafurw/d3-simple-figures/issues"
+    },
+    "homepage": "https://github.com/olafurw/d3-simple-figures#readme",
+    "devDependencies": {
+        "@types/d3": "^7.4.3",
+        "@types/node": "^20.14.0",
+        "@typescript-eslint/eslint-plugin": "^7.11.0",
+        "browserify": "^17.0.1",
+        "esbuild": "^0.21.4",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "3.2.5",
+        "tslib": "^2.8.0",
+        "typescript": "^5.4.5",
+        "typescript-eslint": "^7.11.0",
+        "vitest": "^1.6.0"
+    },
+    "peerDependencies": {
+        "d3": "^6.7.0"
+    }
 }

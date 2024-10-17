@@ -1,2 +1,4 @@
 rollup.config.js
 vitest.config.js
+out/
+dist/

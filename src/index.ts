@@ -1,1 +1,4 @@
-export { makeTree } from './makeTree.js';
+import { makeTree } from './makeTree';
+import { hello } from './hello';
+
+export { makeTree, hello };
